@@ -688,8 +688,8 @@ def main():
     parser.add_argument(
         "--depths", "-d",
         type=lambda s: [float(x)/100 for x in s.split(",")],
-        default=[0.0, 0.1, 0.25, 0.5, 0.75, 0.9, 1.0],
-        help="Comma-separated depth percentages, 0-100 (default: 0,10,25,50,75,90,100)"
+        default=[0.0, 0.25, 0.5, 0.75, 1.0],
+        help="Comma-separated depth percentages, 0-100 (default: 0,25,50,75,100)"
     )
     parser.add_argument(
         "--output", "-o",

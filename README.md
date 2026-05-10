@@ -142,7 +142,7 @@ python niah_benchmark.py --provider openrouter --model anthropic/claude-sonnet-4
 | `--api-key` | - | API key (or use env vars / config.json) |
 | `--max-context` | 128,000 | Maximum context length to test |
 | `--context-lengths` | auto | Comma-separated token lengths (auto-generates 16K, 32K, 64K...) |
-| `--depths` | 0,10,25,50,75,90,100 | Insertion positions as percentage |
+| `--depths` | 0,25,50,75,100 | Insertion positions as percentage |
 | `--output` | niah_results.json | Results file |
 | `--encoding` | cl100k_base | Tiktoken encoding |
 
