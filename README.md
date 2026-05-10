@@ -17,9 +17,11 @@ Key research:
 1. Downloads War and Peace from Project Gutenberg as the haystack (cached locally at `~/.cache/niah_benchmark/`)
 2. Inserts a random fact (needle) at a specified depth within the context, ensuring insertion happens between words
 3. Queries the LLM with explicit instructions to extract the exact answer with all details
-4. Evaluates response accuracy using fuzzy matching (85-90% similarity thresholds) to handle minor variations
-5. Shows real-time progress with ETA and continues testing even if individual tests fail
-6. Tracks errors separately from incorrect answers in results
+4. Evaluates response accuracy using fuzzy matching (90% similarity thresholds)
+5. If fuzzy matching fails, invokes LLM judge (Claude Sonnet 4) to evaluate if the response correctly answers the question
+6. Shows real-time progress with ETA and continues testing even if individual tests fail
+7. Tracks errors separately from incorrect answers in results
+8. Appends results to JSON file with full metadata (provider, model, region, timestamp)
 
 ## Installation
 
@@ -287,7 +289,7 @@ Responses are evaluated using a two-stage process:
 
 ### Stage 2: LLM judge (for fuzzy match failures)
 
-If fuzzy matching fails, Claude Opus 4.6 evaluates whether the response correctly answers the question with the essential facts. This handles cases where:
+If fuzzy matching fails, Claude Sonnet 4.6 via Bedrock evaluates whether the response correctly answers the question with the essential facts. This handles cases where:
 - The response is correct but worded differently
 - The question asks for specific information that's a subset of the full needle
 - Minor paraphrasing or reordering is acceptable
