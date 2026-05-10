@@ -1,0 +1,26 @@
+[
+  {
+    "statement": "The special code mentioned in the manuscript is 47291.",
+    "question": "What is the special code mentioned in the manuscript?"
+  },
+  {
+    "statement": "The reference identifier is XM-2847-ALPHA.",
+    "question": "What is the reference identifier?"
+  },
+  {
+    "statement": "Professor Elizabeth Chen discovered the artifact on March 17th, 2019 in the ancient ruins.",
+    "question": "Who discovered the artifact and when?"
+  },
+  {
+    "statement": "The annual revenue for Q3 2024 was $847.3 million, exceeding projections by 12%.",
+    "question": "What was the annual revenue for Q3 2024?"
+  },
+  {
+    "statement": "The coordinates of the research station are 34.0522° N, 118.2437° W.",
+    "question": "What are the coordinates of the research station?"
+  },
+  {
+    "statement": "The best time to observe the phenomenon is between 2:00 AM and 4:00 AM local time.",
+    "question": "What is the best time to observe the phenomenon?"
+  }
+]
